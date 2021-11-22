@@ -31,7 +31,10 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
           - uses: actions/upload-artifact@main
+      - uses: actions/upload-artifact@master
         with:
+          name: webpack artifacts
+          path: public/
           name: webpack artifacts
           path: public/
 
